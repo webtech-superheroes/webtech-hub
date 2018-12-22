@@ -1,12 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
-    var Students = sequelize.define("students", {
+    var Teams = sequelize.define("teams", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
             unique: true
         },
-        githubProfile: DataTypes.STRING,
-        githubUsername: DataTypes.STRING
+        projectRepo: DataTypes.STRING
     });
-    return Students
+    return Teams
 }
