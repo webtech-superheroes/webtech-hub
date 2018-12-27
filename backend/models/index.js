@@ -40,5 +40,9 @@ db.Sequelize = Sequelize;
 
 db.Students = require('./Students')(sequelize, Sequelize);
 db.Teams = require('./Teams')(sequelize, Sequelize);
+db.TeamMembers = require('./TeamMembers')(sequelize, Sequelize)
+
+db.Students.belongsToMany(db.Teams, {through: db.TeamMembers})
+db.Teams.belongsToMany(db.Students, {through: db.TeamMembers})
 
 module.exports = db;

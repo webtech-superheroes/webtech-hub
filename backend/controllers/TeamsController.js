@@ -1,7 +1,11 @@
 var db = require('../models/index');
 
 module.exports.findAll = (req, res) => {
-    db.Teams.findAll().then(
+    db.Teams.findAll({
+        include: [{
+          model: db.Students
+        }]
+      }).then(
            (results) => {
                res.status(200).send({
                    status: "success",

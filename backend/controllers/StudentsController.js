@@ -16,7 +16,11 @@ module.exports.findAll = (req, res) => {
 };
 
 module.exports.findOne = (req, res) => {
-    db.Students.findById(req.params.id).then(
+    db.Students.findById(req.params.id, {
+        include: [{
+          model: db.Teams
+        }]
+      }).then(
         (result) => {
             if(result) {
                 res.status(200).send(result)

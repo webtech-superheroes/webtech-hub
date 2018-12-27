@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
             unique: true
         },
         githubProfile: DataTypes.STRING,
-        githubUsername: DataTypes.STRING
+        githubUsername: DataTypes.STRING,
+        profilePicture: DataTypes.STRING
     });
     return Students
 }

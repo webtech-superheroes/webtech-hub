@@ -14,15 +14,16 @@ import Header from './components/Header'
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <Router>
           <div>
             <Header />
-
-            <Route path="/" exact component={Index} />
-            <Route path="/teams/" component={Teams} />
-            <Route path="/students/" component={Students} />
-            <Route path="/about/" component={About} />
+            <div style={{padding:'10px'}}>
+              <Route path="/" exact component={Index} />
+              <Route path="/teams/" component={Teams} />
+              <Route path="/students/" component={Students} />
+              <Route path="/about/" component={About} />
+            </div>
           </div>
         </Router>
       </div>

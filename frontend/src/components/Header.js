@@ -19,7 +19,7 @@ class Header extends React.Component {
     super(props)
 
     let pages = ['/', '/teams', '/students', '/about'];
-    let labels = ['Home', 'Teams', 'Students', 'About']
+    let labels = ['Home', 'Echipe', 'Studenti', 'Despre']
 
     let pathname = this.props.location.pathname
     pathname = pathname[pathname.length - 1] !== '/' ? pathname : pathname.substr(0, pathname.length - 1)

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/webtech-superheroes/webtech-hub#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "mysql2": "^1.6.4",
     "sequelize": "^4.41.2"
