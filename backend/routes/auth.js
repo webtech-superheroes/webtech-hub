@@ -2,8 +2,11 @@ const express = require('express')
 
 const router = express.Router()
 
-router.get('/login', (req, res) => {
-    res.status(200).send('login')
-})
+const authController = require('../controllers/AuthController.js')
+
+router.get('/google', authController.loginWithGoogle)
+
+router.get('/google/callback', authController.passport.authenticate('google', { failureRedirect: '/login' }),
+authController.googleCallback)
 
 module.exports = router;

@@ -13,6 +13,17 @@ app.use('/', express.static('frontend/build'))
 //allow cross origin requests
 app.use(cors())
 
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true
+  }));
+
+const authController = require('./backend/controllers/AuthController')
+
+app.use(authController.passport.initialize());
+app.use(authController.passport.session());
+
 //include the API endpoints
 app.use('/api', api);
 
@@ -23,5 +34,7 @@ app.use('/auth', auth);
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/frontend/build/index.html'));
 });
+
+
 
 app.listen(3001)

@@ -77,3 +77,4 @@ typings/
 
 #Config 
 backend/config/db.json
+backend/config/secrets.json
