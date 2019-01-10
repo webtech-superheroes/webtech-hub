@@ -7,6 +7,9 @@
 //As a student I want to be able to login with my GitHub account
 
 //login route
+module.exports.login = (req, res) => {
+    
+}
 
 //register route
 

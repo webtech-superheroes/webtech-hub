@@ -30,3 +30,12 @@ module.exports.findOne = (req, res) => {
         }
     )
 }
+
+module.exports.findStudents = async (req, res) => {
+    let team = await db.Teams.findById(req.params.id)
+    if(team) {
+        let students = await team.getStudents()
+        res.status(200).json(students)
+    }
+    res.status(404).send()
+}
