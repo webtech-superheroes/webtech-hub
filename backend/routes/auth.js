@@ -1,16 +1,9 @@
-//TODO: use Passport JS
+const express = require('express')
 
-//Scenarios:
-//As a student I want to be able to login with my Gmail account
-//As a student I want to be able to login with my Facebook account
-//As a student I want to be able to login with my Linkedin account
-//As a student I want to be able to login with my GitHub account
+const router = express.Router()
 
-//login route
-module.exports.login = (req, res) => {
-    
-}
+router.get('/login', (req, res) => {
+    res.status(200).send('login')
+})
 
-//register route
-
-//logout route
+module.exports = router;
