@@ -49,6 +49,13 @@ npm install
 npm run build
 ```
 
+4. Adăugați setările pentru mediu în fișierul .env
+
+```
+REACT_APP_API_URL="http://localhost:3000"
+REACT_APP_SERVER_URL="http://localhost:3001"
+```
+
 ## Pornire aplicație 
 
 Execută următoarea comandă
@@ -72,6 +79,16 @@ npm start
 ```
 
 Aplicația react va rula pe portul 3000, iar serverul pe portul 3001 
+
+# Referințe
+
+Aplicația a fost creată folosind următoarele pachete npm:
+
+* PassportJS pentru autentificare cu servicii externe
+* Create React App pentru partea de frontend
+* Axios pentru cereri HTTP
+* MaterialUI pentru componente de interfață
+* Sequelize pentru interacținea cu baza de date
 
 
 
