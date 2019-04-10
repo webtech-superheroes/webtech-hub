@@ -6,6 +6,7 @@ import Index from './containers/Index'
 import Teams from './containers/Teams'
 import Students from './containers/Students'
 import About from './containers/About'
+import Login from './containers/Login'
 
 import Header from './components/Header'
 
@@ -23,6 +24,7 @@ class App extends Component {
               <Route path="/teams/" component={Teams} />
               <Route path="/students/" component={Students} />
               <Route path="/about/" component={About} />
+              <Route path="/login/" component={Login} />
             </div>
           </div>
         </Router>

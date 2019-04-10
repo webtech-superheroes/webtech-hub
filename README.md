@@ -14,6 +14,7 @@ Vei avea nevoie de o versiune de NodeJS > 8
 git clone https://github.com/webtech-superheroes/webtech-hub
 ```
 
+
 2. Înstalează modulele node
 
 ```bash
@@ -31,16 +32,50 @@ npm install
 ```bash
 node createdb.js
 ```
+7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```
 
 ### Configurare frontend
 
 1. Navighează în directorul ```./frontend```
 2. Înstalează modulele node
+
+```bash
+npm install
+```
+
 3. Execută comanda
 
 ```bash
 npm run build
 ```
+
+## Pornire aplicație 
+
+Execută următoarea comandă
+
+```bash
+node server.js
+```
+
+## Pornire aplicație în mod dezvoltare
+
+1. Pornește server.js
+
+```bash
+node server.js
+```
+
+2. Navighează în directorul frontend și pornește aplicația de React
+
+```bash
+npm start
+```
+
+Aplicația react va rula pe portul 3000, iar serverul pe portul 3001 
+
+
+
+
 
 
 

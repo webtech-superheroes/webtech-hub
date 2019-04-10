@@ -5,7 +5,7 @@ import axios from 'axios'
 
 import Student from '../components/students/Student'
 
-const API_BASE_URL = 'http://localhost:3001/api'
+const API_BASE_URL = process.env.REACT_APP_SERVER_URL + '/api'
 
 class Students extends Component {
     constructor(props) {
