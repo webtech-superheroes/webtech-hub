@@ -32,7 +32,7 @@ npm install
 ```bash
 node createdb.js
 ```
-7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```
+7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```. Urmăriți instrucțiunile de aici pentru a obține cheile de la [Google](https://developers.google.com/identity/protocols/OAuth2)  
 
 ### Configurare frontend
 
