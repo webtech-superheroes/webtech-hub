@@ -15,7 +15,7 @@ git clone https://github.com/webtech-superheroes/webtech-hub
 ```
 
 
-2. Înstalează modulele node
+2. Înstalează modulele npm
 
 ```bash
 npm install
@@ -32,29 +32,30 @@ npm install
 ```bash
 node createdb.js
 ```
-7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```. Urmăriți instrucțiunile de aici pentru a obține cheile de la [Google](https://developers.google.com/identity/protocols/OAuth2)  
+7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```. 
+8. 
+9. Urmăriți instrucțiunile de aici pentru a obține cheile de la [Google](https://developers.google.com/identity/protocols/OAuth2)  
 
 ### Configurare frontend
 
-1. Navighează în directorul ```./frontend```
-2. Înstalează modulele node
+1. Navighează în directorul frontend
+
+```
+cd frontend
+```
+2. Înstalează modulele npm
 
 ```bash
 npm install
 ```
 
-3. Execută comanda
-
-```bash
-npm run build
-```
-
-4. Adăugați setările pentru mediu în fișierul .env
+3. Adăugați setările pentru mediu în fișierul .env
 
 ```
-REACT_APP_API_URL="http://localhost:3000"
-REACT_APP_SERVER_URL="http://localhost:3001"
+REACT_APP_API_BASEURL="http://ip:3001"
+REACT_APP_BASEURL="http://ip:3000"
 ```
+
 
 ## Pornire aplicație 
 

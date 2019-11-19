@@ -5,8 +5,8 @@ import axios from 'axios'
 
 import Student from '../components/students/Student'
 
-const API_BASE_URL = process.env.REACT_APP_SERVER_URL + '/api'
-
+const API_BASE_URL = process.env.REACT_APP_API_BASEURL + '/api'
+console.log(process.env)
 class Students extends Component {
     constructor(props) {
       super(props) 

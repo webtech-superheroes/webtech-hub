@@ -1,6 +1,6 @@
 {
-    "database": "",
+    "database": "students",
     "username": "",
     "password": "",
-    "host": ""
+    "host": "127.0.0.1"
 }
