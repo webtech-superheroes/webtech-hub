@@ -8,18 +8,20 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-/*
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin: '0 auto',
+    marginTop: 10
    },
  });
-*/
+
 export default function CourseCard(props) {
- // const {classes} = useStyles();
-//className={classes.root}
+ const classes = useStyles();
+//
   return (
-    <Card >
+    <Card className={classes.root}>
       <CardActionArea>
         {/* <CardMedia
           component="img"

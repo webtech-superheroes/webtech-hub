@@ -3,7 +3,7 @@ import List from '@material-ui/core/List';
 
 import axios from 'axios'
 
-import Student from '../components/students/Student'
+import ProfileCard from '../components/ProfileCard'
 
 const API_BASE_URL = process.env.REACT_APP_API_BASEURL + '/api'
 
@@ -26,7 +26,7 @@ class Students extends Component {
         <div>
         <h1>Students</h1>
         <List>
-          {this.state.students.map((student) => <Student key={student.id} profile={student} />)}
+          {this.state.students.map((student) => <ProfileCard key={student.id} profile={student} />)}
         </List>
         </div>
       )

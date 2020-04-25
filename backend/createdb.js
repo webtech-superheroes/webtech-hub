@@ -1,5 +1,7 @@
 var db = require('./models/index');
 
+var teams = require("./sample-data/teams.json")
+
 db.sequelize.sync({force:true}).then(async () => {
     console.log('tables created')
 
@@ -31,7 +33,9 @@ db.sequelize.sync({force:true}).then(async () => {
         teamId: team.id
     })
     
-
+    teams.forEach(async (team) => {
+        await db.Teams.create(team)
+    })
     
 }).catch(() => {
     console.log('could not create tables')

@@ -13,18 +13,12 @@ class Team extends Component {
       return (
         <ListItem>
             <ListItemText>{team.name}</ListItemText>
-            <br/>
-            <Button
-              label="View Team"
-              variant="contained" color="primary"
-            >Members</Button>
-
             <Button
               href={team.projectRepo}
               target="_blank"
               variant="contained" color="primary"
               startIcon={<GitHubIcon />}
-            >GitHub Repo</Button>
+            >Project Repo</Button>
             
       </ListItem>
       )  
