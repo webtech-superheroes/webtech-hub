@@ -21,11 +21,12 @@ class Student extends Component {
             </ListItemAvatar>
             <ListItemText>{profile.name}</ListItemText>
             <br/>
+          
             <Button
               href={profile.githubProfile}
               target="_blank"
               label="GitHub Link"
-              secondary={true}
+              variant="contained" color="primary"
             >Github</Button>
       </ListItem>
       )  

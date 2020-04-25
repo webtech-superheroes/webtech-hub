@@ -4,36 +4,34 @@ import List from '@material-ui/core/List';
 
 import axios from 'axios'
 
-import Team from '../components/teams/Team'
-
+import CourseCard from '../components/courses/CourseCard'
 
 
 const API_BASE_URL = process.env.REACT_APP_API_BASEURL + '/api'
 
-class Teams extends Component {
+class Courses extends Component {
     constructor(props) {
       super(props) 
       this.state = {
-        teams: []
+        courses: []
       }
     }
 
     componentDidMount() {
-      axios.get(API_BASE_URL + '/teams').then((result) => {
-        this.setState({teams: result.data.results})
+      axios.get(API_BASE_URL + '/data/content.json').then((result) => {
+        this.setState({courses: result.data})
       })
     }
 
     render() {
       return (
         <div>
-        <h1>Teams</h1>
-        <List>
-          {this.state.teams.map((team) => <Team team={team}/>)}
-        </List>
+        <h1>Courses</h1>
+
+      {this.state.courses.map((course) => <CourseCard course={course}/>)}
         </div>
       )
     }
   }
 
-export default Teams
+export default Courses

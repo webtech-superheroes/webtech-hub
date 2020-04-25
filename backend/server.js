@@ -18,4 +18,6 @@ app.use(require('express-session')({
 //include the API endpoints
 app.use('/', api);
 
+app.use('/data', express.static('./data'))
+
 app.listen(3001)

@@ -1,0 +1,208 @@
+[
+    {
+        "title": "1. HTTP",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1FosDflhLsz82WaEUK_rY0az5mvKdStsGBeCpVcPdzYg/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/T0H1amPzuzo"
+            }
+        ],
+        "description": "This course introduces the main concepts around how web works. You will learn the HTTP protocol and how web servers exchange data with modern browsers."
+    },
+    {
+        "title": "2. Javascript - 1",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1rkgN8XbYUlqrUQNwl3xpjOaqXda_s1Mp2FV-7APKLZE/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/UEoCb0i3kbA"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c1.zip"
+            }
+        ],
+        "description": "In this course you will get familiar with JavaScript as a multi-paradigm language. You will get to know of the sintaxt and different data types."
+    },
+    {
+        "title": "3. Javascript - 2",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1mv6oy42mqpQ_CK5GKvF5NHLNuM10Bj7sN6zbEsNrK80/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/hs4ndlUq3yU"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c2.zip"
+            }
+        ],
+        "description": "This course coveres working with functions and objects in JavaScript"
+    },
+    {
+        "title": "4. HTML + async JS",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1fK57wjW0VyJlLI3PhqMgdc5lbtnentd0QAcsj1fla0M/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/6I_-sPtCqqk"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c3.zip"
+            }
+        ],
+        "description": "Get to know the specifics of working with events in HTML and understand the asynchronous programming model"
+    },
+    {
+        "title": "5. CSS selectors",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1fofAXqUy6EdMGgOA4vmL6FPInloaar2qveNfN7-DHw0/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/GXDjy3sSbN8"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c4.zip"
+            }
+        ],
+        "description": "Master CSS Selectors so that you won't get confused when dealing with styles on youw website"
+    },
+    {
+        "title": "6. CSS layout",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1Q0tHRNlaffAbbc3L35aexokGAD29G3skW1hthyGJ8vY/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/FkOM7n2fbu0"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c5.zip"
+            }
+        ]
+    },
+    {
+        "title": "7. Node and web architectures",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1wapzudnbNEvngQlEoHdksg3Mfu4ihR-D4vMShM1_VSg/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/cBisuy2Bm20"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c6.zip"
+            }
+        ]
+    },
+    {
+        "title": "8. Object-relational mapping (ORM)",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/15JwFzpnaR0Eypa6Yd8VaL8H2jmOsRoBma4KZ1bI1WdI/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/Dh4I-vjqb-A"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c7.zip"
+            }
+        ]
+    },
+    {
+        "title": "9. Single-page application",
+        "links": [
+            {
+                "label": "Presentation",
+                "link": "https://docs.google.com/presentation/d/1_YCcq22jq6LrvX3C0an6cuoIcP7LoZycmK70y55JSE0/edit?usp=sharing"
+            },
+            {
+                "label": "Video",
+                "link": "https://youtu.be/BI4XV1_yXCU"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c8.zip"
+            }
+        ]
+    },
+    {
+        "title": "10. React",
+        "links": [
+            {
+                "label": "Video",
+                "link": "https://youtu.be/FhlBLDjIq5c"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c9.zip"
+            }
+        ]
+    },
+    {
+        "title": "11. React",
+        "links": [
+            {
+                "label": "Video",
+                "link": "https://youtu.be/8RXtP8_yt8s"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c10.zip"
+            }
+        ]
+    },
+    {
+        "title": "12. Redux",
+        "links": [
+            {
+                "label": "Video",
+                "link": "https://youtu.be/_V6lfkGiUr4"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c11.zip"
+            }
+        ]
+    },
+    {
+        "title": "13. Integrating external services",
+        "links": [
+            {
+                "label": "Video",
+                "link": "https://youtu.be/2vOJZyKciig"
+            },
+            {
+                "label": "Examples",
+                "link": "http://andrei.ase.ro/assets/tw/2019/c12.zip"
+            }
+        ]
+    }
+]
