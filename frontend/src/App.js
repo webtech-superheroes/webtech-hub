@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Index from './containers/Index'
 import Teams from './containers/Teams'
 import Students from './containers/Students'
+import Workspace from './containers/Workspace'
 import About from './containers/About'
 import Login from './containers/Login'
 
@@ -23,6 +24,7 @@ class App extends Component {
               <Route path="/" exact component={Index} />
               <Route path="/teams/" component={Teams} />
               <Route path="/students/" component={Students} />
+              <Route path="/workspace/" component={Workspace} />
               <Route path="/about/" component={About} />
               <Route path="/login/" component={Login} />
             </div>

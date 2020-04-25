@@ -1,4 +1,4 @@
-var db = require('./backend/models/index');
+var db = require('./models/index');
 
 db.sequelize.sync({force:true}).then(async () => {
     console.log('tables created')

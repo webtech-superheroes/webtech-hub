@@ -24,7 +24,7 @@ class Students extends Component {
     render() {
       return (
         <div>
-        <h1>Studenți</h1>
+        <h1>Students</h1>
         <List>
           {this.state.students.map((student) => <Student key={student.id} profile={student} />)}
         </List>

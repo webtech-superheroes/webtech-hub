@@ -1,0 +1,12 @@
+[mysqld]
+performance_schema = off
+key_buffer_size = 16M
+tmp_table_size = 1M
+innodb_buffer_pool_size = 1M
+innodb_log_buffer_size = 1M
+max_connections = 25
+sort_buffer_size = 512M
+read_buffer_size = 256K
+read_rnd_buffer_size = 512K
+join_buffer_size = 128K
+thread_stack = 196K
