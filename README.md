@@ -1,5 +1,6 @@
 # WebTech Hub
-WebTech Superheroes social hub is a place where people passionate about web technologies learn and share experience
+
+WebTech Superheroes Hub is a place where people passionate about web technologies learn and share experience
 
 ## Instructiuni instalare
 
