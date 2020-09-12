@@ -1,6 +1,7 @@
 const passport = require('passport');
 
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+var GitHubStrategy = require('passport-github').Strategy;
 
 const secrets = require('../config/secrets.json')
 
@@ -13,6 +14,17 @@ passport.use(new GoogleStrategy({
       console.log(profile)
       done(undefined, profile)
   }
+));
+
+passport.use(new GitHubStrategy({
+  clientID: secrets.githubClientId,
+  clientSecret: secrets.githubClientSecret,
+  callbackURL: "https://hub.webtech-superheroes.net/api/auth/github/callback"
+},
+function(accessToken, refreshToken, profile, cb) {
+    console.log(profile)
+    cb(undefined, profile)
+}
 ));
 
 passport.serializeUser(function(user, done) {
@@ -40,6 +52,12 @@ module.exports.loginWithGoogle = passport.authenticate('google', { scope: 'https
 
 module.exports.googleCallback = (req, res) => {
     res.redirect('/');
+}
+
+module.exports.loginWithGithub = passport.authenticate('github')
+
+module.exports.githubCallback = (req, res) => {
+  res.redirect('/');
 }
 
 module.exports.passport = passport
