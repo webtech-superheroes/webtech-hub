@@ -7,7 +7,7 @@ const secrets = require('../config/secrets.json')
 passport.use(new GoogleStrategy({
     clientID: secrets.googleClientId,
     clientSecret: secrets.googleClientSecret,
-    callbackURL: "http://localhost:3001/auth/google/callback"
+    callbackURL: "https://hub.webtech-superheroes.net/api/auth/google/callback"
   },
   function(token, tokenSecret, profile, done) {
       console.log(profile)

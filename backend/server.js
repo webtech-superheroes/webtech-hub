@@ -1,6 +1,8 @@
 const express = require("express")
 const path = require('path');
+const passport = require('passport');
 const api = require('./routes/api')
+const auth = require('./routes/auth')
 
 const cors = require("cors")
 
@@ -17,6 +19,7 @@ app.use(require('express-session')({
 
 //include the API endpoints
 app.use('/', api);
+app.use('/auth', auth);
 
 app.use('/data', express.static('./data'))
 

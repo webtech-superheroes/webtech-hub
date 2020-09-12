@@ -25,7 +25,6 @@ class App extends Component {
               <Route path="/" exact component={Index} />
               <Route path="/teams/" component={Teams} />
               <Route path="/students/" component={Students} />
-              <Route path="/workspace/" component={Workspace} />
               <Route path="/learn/" component={Courses} />
               <Route path="/about/" component={About} />
               <Route path="/login/" component={Login} />

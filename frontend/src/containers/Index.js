@@ -8,7 +8,7 @@ class Index extends Component {
     render() {
       return (
         <div>
-          <h1 style={{textAlign: 'center'}}>Welcome to WebTech Superheroes Code</h1> 
+          <h1 style={{textAlign: 'center'}}>Welcome to WebTech Superheroes Hub</h1> 
           <div>
               <p>Before you take a peek in the platform, please see a quick guide on how to make the most out of it.</p>
               <p>First thing first, make sure your profile has your Git profile link.</p>
@@ -16,11 +16,9 @@ class Index extends Component {
           </div>
           <div style={{textAlign: 'center'}}>
             <Button
-                href="/account"
-                target="_blank"
+                href="/workspace"
                 variant="contained" color="primary"
-                startIcon={<GitHubIcon />}
-              >Connect With Github</Button>
+              >Open Workspace</Button>
           </div>
         </div>)
     }
