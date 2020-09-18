@@ -5,7 +5,7 @@ import axios from 'axios'
 
 import ProfileCard from '../components/ProfileCard'
 
-const API_BASE_URL = process.env.REACT_APP_API_BASEURL + '/api'
+const API_BASE_URL = process.env.REACT_APP_API_BASEURL
 
 class Students extends Component {
     constructor(props) {

@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY . .
 
+RUN apt-get update -y && apt-get upgrade -y && \
+    apt-get install -y bash git openssh-client
+
 RUN npm install
 
 EXPOSE 3001

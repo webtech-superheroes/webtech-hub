@@ -5,6 +5,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             unique: true
         },
+        githubId: DataTypes.BIGINT,
         githubProfile: DataTypes.STRING,
         githubUsername: DataTypes.STRING,
         profilePicture: DataTypes.STRING

@@ -7,6 +7,7 @@ import Teams from './containers/Teams'
 import Students from './containers/Students'
 import Workspace from './containers/Workspace'
 import About from './containers/About'
+import Account from './containers/Account'
 import Login from './containers/Login'
 
 import Header from './components/Header'
@@ -28,6 +29,7 @@ class App extends Component {
               <Route path="/learn/" component={Courses} />
               <Route path="/about/" component={About} />
               <Route path="/login/" component={Login} />
+              <Route path="/account/" component={Account} />
             </div>
           </div>
         </Router>

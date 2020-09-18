@@ -19,10 +19,12 @@ passport.use(new GoogleStrategy({
 passport.use(new GitHubStrategy({
   clientID: secrets.githubClientId,
   clientSecret: secrets.githubClientSecret,
-  callbackURL: "https://hub.webtech-superheroes.net/api/auth/github/callback"
+  callbackURL: "https://hub.webtech-superheroes.net/api/auth/github/callback",
+  scope: ['user', 'repo', 'admin:org']
 },
 function(accessToken, refreshToken, profile, cb) {
-    console.log(profile)
+    console.log(profile, accessToken, refreshToken)
+    profile.token = accessToken
     cb(undefined, profile)
 }
 ));
@@ -51,16 +53,32 @@ module.exports.login = (req, res) => {
 module.exports.loginWithGoogle = passport.authenticate('google', { scope: 'https://www.googleapis.com/auth/plus.login' })
 
 module.exports.googleCallback = (req, res) => {
-    res.redirect('/');
+    res.redirect('/account');
 }
 
-module.exports.loginWithGithub = passport.authenticate('github')
+module.exports.loginWithGithub = passport.authenticate('github', { 
+  scope: ['user', 'repo', 'admin:org'],
+  state: 'bbbaa'
+})
 
 module.exports.githubCallback = (req, res) => {
-  res.redirect('/');
+  res.redirect('/account');
+} 
+
+module.exports.userDetails = (req, res) => {
+  if(req.user) {
+    res.json({ id: req.user.id, username: req.user.username });
+  } else {
+    console.log('not logged in')
+    res.status(401).send()
+  }
 }
 
 module.exports.passport = passport
 //register route
 
 //logout route
+module.exports.logout = (req, res) => {
+  req.logout();
+  res.redirect('/login');
+}

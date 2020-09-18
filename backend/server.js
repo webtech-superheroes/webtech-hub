@@ -12,7 +12,7 @@ const app = express()
 app.use(cors())
 
 app.use(require('express-session')({
-    secret: 'keyboard cat',
+    secret: '1231k2j31l2j312489sd00asdaaweq',
     resave: true,
     saveUninitialized: true
   }));

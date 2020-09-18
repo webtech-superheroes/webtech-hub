@@ -16,4 +16,8 @@ router.get('/github', authController.loginWithGithub)
 router.get('/github/callback', authController.passport.authenticate('github', { failureRedirect: '/login'}),
 authController.githubCallback)
 
+router.get('/users/me', authController.userDetails);
+
+router.get('/logout', authController.logout)
+
 module.exports = router;

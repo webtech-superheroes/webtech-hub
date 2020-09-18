@@ -8,11 +8,16 @@ class Login extends Component {
       <div>  
         <h1>Login</h1>
         <Button
-              href={process.env.REACT_APP_API_BASEURL + '/auth/google'}
-              target="_blank"
+              href={'/api/auth/google'}
               label="Login with google"
-              secondary={false}
-            >Login with Google</Button>
+              variant="contained" color="primary"
+            >Login with Google</Button> 
+        
+        <Button
+            href={'/api/auth/github'}
+            label="Login with google"
+            variant="contained" color="primary"
+          >Login with Github</Button>
       </div> 
       )
     }
