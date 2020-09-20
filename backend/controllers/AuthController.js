@@ -1,4 +1,5 @@
 const passport = require('passport');
+var db = require('../models/index');
 
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var GitHubStrategy = require('passport-github').Strategy;
@@ -20,12 +21,26 @@ passport.use(new GitHubStrategy({
   clientID: secrets.githubClientId,
   clientSecret: secrets.githubClientSecret,
   callbackURL: "https://hub.webtech-superheroes.net/api/auth/github/callback",
-  scope: ['user', 'repo', 'admin:org']
+  scope: ['user', 'repo']
 },
-function(accessToken, refreshToken, profile, cb) {
+async function(accessToken, refreshToken, profile, cb) {
     console.log(profile, accessToken, refreshToken)
-    profile.token = accessToken
-    cb(undefined, profile)
+    try {
+      let student = await db.Students.findOne({where: {githubId: profile.id }})
+
+      if(student) {
+        profile.studentId = student.id
+      } else {
+        let student = await db.Students.create({githubId: profile.id, name: profile._json.name ? profile._json.name : profile._json.login, githubProfile: profile._json.url, githubUsername: profile._json.login, profilePicture: profile._json.avatar_url})
+        profile.studentId = student.id
+      }
+      console.log(student)
+      profile.token = accessToken
+      cb(undefined, profile)
+    } catch(err) {
+      cb(err, undefined)
+    }
+    
 }
 ));
 
@@ -57,7 +72,7 @@ module.exports.googleCallback = (req, res) => {
 }
 
 module.exports.loginWithGithub = passport.authenticate('github', { 
-  scope: ['user', 'repo', 'admin:org'],
+  scope: ['user', 'repo'],
   state: 'bbbaa'
 })
 
@@ -67,7 +82,7 @@ module.exports.githubCallback = (req, res) => {
 
 module.exports.userDetails = (req, res) => {
   if(req.user) {
-    res.json({ id: req.user.id, username: req.user.username });
+    res.json({ studentId: req.user.studentId, githubId: req.user.id, username: req.user.username });
   } else {
     console.log('not logged in')
     res.status(401).send()

@@ -11,6 +11,9 @@ const app = express()
 //allow cross origin requests
 app.use(cors())
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use(require('express-session')({
     secret: '1231k2j31l2j312489sd00asdaaweq',
     resave: true,

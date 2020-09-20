@@ -32,8 +32,9 @@ class Account extends Component {
             <div>
                 <h1>Account</h1>
 
-                ID: {this.state.account.id} <br/>
-                Name: {this.state.account.username}
+                ID: {this.state.account.studentId} <br/>
+                GitHub ID: {this.state.account.githubId} <br/>
+                Username: {this.state.account.username}
 
                 <div>
                 <Button

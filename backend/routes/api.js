@@ -12,6 +12,8 @@ const studentsController = require('../controllers/StudentsController.js')
 router.get('/students', studentsController.findAll)
 router.get('/students/:id', studentsController.findOne)
 
+router.post('/students/:id/assignments', studentsController.createAssignment)
+
 const teamsController = require('../controllers/TeamsController.js')
 
 router.get('/teams', teamsController.findAll)
