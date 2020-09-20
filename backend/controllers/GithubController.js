@@ -18,12 +18,12 @@ module.exports.createRepo = async (req, res) => {
     try {
         const octokit = new Octokit({auth: req.user.token});
         let repos = await octokit.request('POST /user/repos', {
-            name: 'exam-prep6',
+            name: 'homework_1_2019',
             description: 'homework',
             private: true
           })
 
-        const path = '/app/homework';  
+        const path = '/app/repos/homework_1_2019';  
         let remote = repos.data['html_url'] + '.git'
         await git(path).addRemote(repos.data['full_name'].replace('/', '_'), remote)
         await git(path).push(remote.replace('://', `://${req.user.username}:${req.user.token}@`), 'master')   

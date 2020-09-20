@@ -7,7 +7,7 @@ import axios from 'axios'
 import CourseCard from '../components/courses/CourseCard'
 
 
-const API_BASE_URL = process.env.REACT_APP_API_BASEURL + '/api'
+const API_BASE_URL = process.env.REACT_APP_API_BASEURL
 
 class Courses extends Component {
     constructor(props) {

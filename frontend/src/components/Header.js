@@ -1,25 +1,46 @@
 import React from 'react';
 import { withRouter } from "react-router-dom";
-
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
+import Drawer from '@material-ui/core/Drawer';
+
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = theme => ({
   root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
+    flexGrow: 3,
   },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  }
 });
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
 
-    let pages = ['/', '/teams', '/students', '/learn', '/account'];
-    let labels = ['Home', 'Teams', 'Students', 'Learn', 'Account']
+    let pages = ['/', '/teams', '/students', '/learn', '/assignments', '/account'];
+    let labels = ['Home', 'Teams', 'Students', 'Courses', 'Assignments', 'Account']
 
     let pathname = this.props.location.pathname
     pathname = pathname[pathname.length - 1] !== '/' ? pathname : pathname.substr(0, pathname.length - 1)
@@ -29,14 +50,27 @@ class Header extends React.Component {
     this.state = {
         value: index,
         pages: pages,
-        labels: labels
+        labels: labels,
+        drawer: false
     };
   }
+
+  toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    
+
+    this.setState({drawer: open });
+  };
   
 
-  handleChange = (event, value) => {
+  handleChange = (value) => {
     this.setState({ value });
+
+    
     this.props.history.push(this.state.pages[value])
+    this.toggleDrawer(false)
   };
 
   render() {
@@ -44,11 +78,29 @@ class Header extends React.Component {
     const { value } = this.state;
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} >
         <AppBar position="static">
-          <Tabs value={value} onChange={this.handleChange}>
-            {this.state.labels.map((element) => <Tab label={element}/>)}
-          </Tabs>
+          <Drawer open={this.state['drawer']} onClose={this.toggleDrawer(false)}>
+            <div
+            className={classes.list} onClick={this.toggleDrawer(false)}>
+              <List>
+                {this.state.labels.map((text, index) => (
+                <ListItem button key={text} onClick={() => {this.handleChange(index)}}>
+                  <ListItemText primary={text} />
+                </ListItem>
+                ))}
+              </List>
+            </div>
+          </Drawer>  
+          <Toolbar>
+            <IconButton edge="start" onClick={this.toggleDrawer(true)} className={classes.menuButton} color="inherit" aria-label="menu">
+                <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              WebTech Hub
+            </Typography>
+            <Button color="inherit" onClick={() => this.props.history.push('/account')}>Account</Button>
+          </Toolbar>
         </AppBar>
       </div>
     );

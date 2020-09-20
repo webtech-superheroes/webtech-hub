@@ -18,7 +18,7 @@ class Team extends Component {
               target="_blank"
               variant="contained" color="primary"
               startIcon={<GitHubIcon />}
-            >Project Repo</Button>
+            >Open Repo</Button>
             
       </ListItem>
       )  
