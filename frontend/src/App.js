@@ -12,6 +12,7 @@ import Login from './containers/Login'
 import Header from './components/Header'
 import Courses from './containers/Courses';
 import Assignments from './containers/Assignments';
+import LabActivities from './containers/LabActivities';
 
 
 
@@ -30,6 +31,7 @@ class App extends Component {
               <Route path="/learn/" component={Courses} />
               <Route path="/about/" component={About} />
               <Route path="/login/" component={Login} />
+              <Route path="/lab-activities/" component={LabActivities} />
               <Route path="/assignments/" component={Assignments} />
               <Route path="/account/" component={Account} />
             </div>

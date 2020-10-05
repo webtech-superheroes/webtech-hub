@@ -1,11 +1,5 @@
 [
     {
-        "title": "HTML / JSON", 
-        "repo": "https://github.com/webtech-superheroes/exam-prep",
-        "publish_date": "2020-10-05",
-        "due_date": "2020-10-11"
-    },
-    {
         "title": "JavaScript basics 1", 
         "repo": "",
         "publish_date": "2020-10-23",

@@ -31,7 +31,8 @@ async function(accessToken, refreshToken, profile, cb) {
       if(student) {
         profile.studentId = student.id
       } else {
-        let student = await db.Students.create({githubId: profile.id, name: profile._json.name ? profile._json.name : profile._json.login, githubProfile: profile._json.url, githubUsername: profile._json.login, profilePicture: profile._json.avatar_url})
+        let githubProfile = `https://github.com/${profile._json.login}`
+        let student = await db.Students.create({githubId: profile.id, name: profile._json.name ? profile._json.name : profile._json.login, githubProfile: githubProfile, githubUsername: profile._json.login, profilePicture: profile._json.avatar_url})
         profile.studentId = student.id
       }
       console.log(student)

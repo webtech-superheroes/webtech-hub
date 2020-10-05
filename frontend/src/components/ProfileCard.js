@@ -70,14 +70,10 @@ const ProfileCard = (props) => {
         <h3 className={styles.heading}>{profile.name}</h3>
       </CardContent>
       <Divider light />
+    
       <Box display={'flex'}>
         <Box p={2} flex={'auto'} className={borderedGridStyles.item}>
-          <p className={styles.statLabel}>Commits</p>
-          <p className={styles.statValue}><a href={profile.githubProfile}>17</a></p>
-        </Box>
-        <Box p={2} flex={'auto'} className={borderedGridStyles.item}>
-          <p className={styles.statLabel}>GitHub Followers</p>
-          <p className={styles.statValue}><a href={profile.githubProfile}>23</a></p>
+          <p className={styles.statValue}><a target="_blank" href={profile.githubProfile}>GitHub</a></p>
         </Box>
       </Box>
     </Card>

@@ -16,7 +16,7 @@ const useStyles = makeStyles({
    },
  });
 
-export default function AssignmentCard(props) {
+export default function LabActivityCard(props) {
  const classes = useStyles();
 //
   return (
@@ -24,16 +24,16 @@ export default function AssignmentCard(props) {
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            {props.assignment.title}
+            {props.activity.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Publish date: {props.assignment.publish_date} <br/>
-            Due date: {props.assignment.due_date}
+            Publish date: {props.activity.publish_date} <br/>
+            Due date: {props.activity.due_date}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" target="_blank"  href={props.assignment.repo}>
+        <Button size="small" color="primary" target="_blank"  href={props.activity.repo}>
                 Repo
         </Button>
       </CardActions>
