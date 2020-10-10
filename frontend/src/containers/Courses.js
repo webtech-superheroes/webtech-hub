@@ -26,9 +26,10 @@ class Courses extends Component {
     render() {
       return (
         <div>
-        <h1>Courses</h1>
-
-      {this.state.courses.map((course) => <CourseCard course={course}/>)}
+          <h1>Courses 2020/2021</h1>
+            <p>TBA</p>
+          <h1>Courses 2019/2020</h1>
+            {this.state.courses.map((course) => <CourseCard course={course}/>)}
         </div>
       )
     }
