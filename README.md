@@ -77,11 +77,11 @@ Aplicația react va rula pe portul 3000, iar serverul pe portul 3001
 
 Aplicația a fost creată folosind următoarele pachete npm:
 
-* PassportJS pentru autentificare cu servicii externe
-* Create React App pentru partea de frontend
-* Axios pentru cereri HTTP
-* MaterialUI pentru componente de interfață
-* Sequelize pentru interacținea cu baza de date
+* PassportJS pentru autentificare cu servicii externe - http://www.passportjs.org/
+* Create React App pentru partea de frontend - https://create-react-app.dev/
+* Axios pentru cereri HTTP - https://github.com/axios/axios
+* MaterialUI pentru componente de interfață - https://material-ui.com/
+* Sequelize pentru interacținea cu baza de date - https://sequelize.org/
 
 
 
