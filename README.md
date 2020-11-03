@@ -57,15 +57,6 @@ REACT_APP_API_BASEURL="http://ip:3001"
 REACT_APP_BASEURL="http://ip:3000"
 ```
 
-
-## Pornire aplicație 
-
-Execută următoarea comandă
-
-```bash
-node server.js
-```
-
 ## Pornire aplicație în mod dezvoltare
 
 1. Pornește server.js
