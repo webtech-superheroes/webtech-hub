@@ -57,6 +57,8 @@ REACT_APP_API_BASEURL="http://ip:3001"
 REACT_APP_BASEURL="http://ip:3000"
 ```
 
+* pentru adresa locala folositi localhost sau 127.0.0.1
+
 ## Pornire aplicație în mod dezvoltare
 
 1. Pornește server.js
