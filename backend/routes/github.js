@@ -5,7 +5,6 @@ const router = express.Router()
 const githubController = require('../controllers/GithubController.js')
 
 router.get('/repos', githubController.getUserRepos)
-
-router.get('/addrepo', githubController.createRepo)
+router.post('/repos', githubController.createRepo)
 
 module.exports = router

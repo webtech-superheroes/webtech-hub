@@ -1,8 +1,6 @@
 const { Octokit } = require("@octokit/rest");
 const git = require('simple-git');
 
-
-
 module.exports.getUserRepos = async (req, res) => {
     const octokit = new Octokit({auth: req.user.token});
     try {
