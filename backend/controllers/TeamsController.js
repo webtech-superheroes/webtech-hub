@@ -20,7 +20,7 @@ module.exports.findAll = (req, res) => {
 };
 
 module.exports.findOne = (req, res) => {
-    db.Teams.findById(req.params.id).then(
+    db.Teams.findByPk(req.params.id).then(
         (result) => {
             if(result) {
                 res.status(200).send(result)
@@ -32,7 +32,7 @@ module.exports.findOne = (req, res) => {
 }
 
 module.exports.findStudents = async (req, res) => {
-    let team = await db.Teams.findById(req.params.id)
+    let team = await db.Teams.findByPk(req.params.id)
     if(team) {
         let students = await team.getStudents()
         res.status(200).json(students)

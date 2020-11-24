@@ -16,7 +16,7 @@ module.exports.findAll = (req, res) => {
 };
 
 module.exports.findOne = (req, res) => {
-    db.Students.findById(req.params.id, {
+    db.Students.findByPk(req.params.id, {
         include: [{
           model: db.Teams
         }]
