@@ -11,5 +11,30 @@
         "repo": "https://github.com/webtech-superheroes/html-json-prep",
         "publish_date": "2020-10-12",
         "due_date": "2020-10-18"
+    },
+    {
+        "title": "Simple Single-page App (SPA) Architecture", 
+        "repo": "https://github.com/webtech-superheroes/simple-spa",
+        "publish_date": "2020-10-19",
+        "due_date": "2020-11-01"
+    },
+    {
+        "title": "Progressive Web App (PWA) with ReactJS", 
+        "repo": "https://github.com/webtech-superheroes/webtech-hub",
+        "publish_date": "2020-11-02",
+        "due_date": "2020-11-22"
+    },
+    {
+        "title": "REST Practice", 
+        "repo": "https://github.com/webtech-superheroes/rest-prep",
+        "publish_date": "2020-11-24",
+        "due_date": "N/A"
+    },
+    {
+        "title": "REACT Practice", 
+        "repo": "https://github.com/webtech-superheroes/rest-prep",
+        "publish_date": "2020-11-24",
+        "due_date": "N/A"
     }
+
 ]

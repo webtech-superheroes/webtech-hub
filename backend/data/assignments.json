@@ -1,23 +1,11 @@
-[
-    {
-        "title": "JavaScript basics 1", 
-        "repo": "",
-        "publish_date": "2020-10-23",
-        "due_date": "2020-10-30"
-    },{
-        "title": "JavaScript basics 2", 
-        "repo": "",
-        "publish_date": "2020-11-13",
-        "due_date": "2020-11-20"
-    },{
-        "title": "REST services", 
-        "repo": "",
-        "publish_date": "2020-12-04",
-        "due_date": "2020-12-11"
-    },{
-        "title": "REACT JS",
-        "repo": "",
-        "publish_date": "2021-01-08",
-        "due_date": "2021-01-15"
-    }
-]
+[{
+    "title": "JavaScript basics 1", 
+    "repo": "https://github.com/webtech-superheroes/homework_1",
+    "publish_date": "2020-10-26",
+    "due_date": "2020-11-01"
+},{
+    "title": "JavaScript basics 2", 
+    "repo": "https://github.com/webtech-superheroes/homework_2",
+    "publish_date": "2020-11-23",
+    "due_date": "2020-11-29"
+}]
