@@ -15,26 +15,30 @@ Vei avea nevoie de o versiune de NodeJS > 8
 git clone https://github.com/webtech-superheroes/webtech-hub
 ```
 
+2. Navigează in directorul backend
 
-2. Înstalează modulele npm
+```bash
+cd backend
+```
+
+3. Înstalează modulele npm
 
 ```bash
 npm install
 ```
 
-3. Configurează un server MySQL și crează o bază de date
+4. Configurează un server MySQL și crează o bază de date
 
-4. În directorul ```./backend/config/``` crează un fișier ```db.json``` cu structura indicată în fișierul ```db.sample.json```
+5. În directorul ```./backend/config/``` crează un fișier ```db.json``` cu structura indicată în fișierul ```db.sample.json```
 
-5. Adaugă setările pentru baza de date în fișierul ```db.json```
+6. Adaugă setările pentru baza de date în fișierul ```db.json```
 
-6. Execută scriptul ```createdb.js``` pentru a realiza structura bazei de date
+7. Execută scriptul ```createdb.js``` pentru a realiza structura bazei de date
 
 ```bash
 node createdb.js
 ```
-7. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```. 
-8. 
+8. Obține credențiale de autentificare cu Google OAuth2 și configurează cheile secrete în fișierul ```secrets.json``` din directorul ```./backend/config/``` cu structura indicată în fișierul ```secrets.sample.json```. 
 9. Urmăriți instrucțiunile de aici pentru a obține cheile de la [Google](https://developers.google.com/identity/protocols/OAuth2)  
 
 ### Configurare frontend
@@ -61,7 +65,7 @@ REACT_APP_BASEURL="http://ip:3000"
 
 ## Pornire aplicație în mod dezvoltare
 
-1. Pornește server.js
+1. Navighează in directorul backend și pornește aplicația backend
 
 ```bash
 node server.js
@@ -79,10 +83,10 @@ Aplicația react va rula pe portul 3000, iar serverul pe portul 3001
 
 Aplicația a fost creată folosind următoarele pachete npm:
 
-* PassportJS pentru autentificare cu servicii externe - http://www.passportjs.org/
 * Create React App pentru partea de frontend - https://create-react-app.dev/
-* Axios pentru cereri HTTP - https://github.com/axios/axios
 * MaterialUI pentru componente de interfață - https://material-ui.com/
+* Axios pentru cereri HTTP - https://github.com/axios/axios
+* PassportJS pentru autentificare cu servicii externe - http://www.passportjs.org/
 * Sequelize pentru interacținea cu baza de date - https://sequelize.org/
 
 
