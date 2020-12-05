@@ -28,7 +28,9 @@ class Teams extends Component {
       return (
         <div>
         <h1>Teams 2020/2021</h1>
-        <p>TBA</p>
+          <List>	
+            {this.state.teams.map((team) => <Team team={team}/>)}	
+          </List>
         </div>
       )
     }
